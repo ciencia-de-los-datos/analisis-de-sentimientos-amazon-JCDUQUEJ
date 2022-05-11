@@ -138,7 +138,7 @@ def pregunta_04():
         analyzer=analyzer,
         lowercase=True,
         stop_words="english",
-        token_pattern=r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
+        token_pattern=r"(?u)\b[a-zA-Z][a-zA-Z]+\b", #r"(?u)\b[a-zA-Z][a-zA-Z]+\b",
         binary=True,
         max_df=1.0,
         min_df=5,
@@ -165,7 +165,7 @@ def pregunta_04():
     #    "____": np.____(____, ____, ____),
     #}
     param_grid = {
-        "bernoulliNB": np.arange(0.1, 1, 0.1),
+        "bernoulliNB__alpha": np.linspace(0.1, 1.0, 10),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
